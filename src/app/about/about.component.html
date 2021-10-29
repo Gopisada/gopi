@@ -1,0 +1,19 @@
+<div class="header">
+    Welcome to angular 
+</div>
+
+<p>Welcome to About component!</p>
+<div *ngFor="let i of array">
+    {{i}}
+</div>
+<div *ngIf="showcontent">
+    {{name}}
+</div>
+
+
+<button (click)="show()">showname</button>
+<button (click)="hide()">hidename</button>
+
+<div *ngIf="menupanel">
+    <app-menu></app-menu>
+    </div>

@@ -1,0 +1,8 @@
+<div class="overlay"  (click)="closeMenu()"></div>
+
+<p>menu works!</p>
+
+<div class="overlay-left" *ngIf="menuPanel">
+    <ul class="menu-content" style="height:calc(100vh-140px)">
+    <li  class="menu-list" *ngFor="let i of listofItems" style="margin-top:10px">{{i.arraylist}}</li></ul>
+</div>

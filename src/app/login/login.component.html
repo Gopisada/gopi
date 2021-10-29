@@ -1,0 +1,28 @@
+
+<form [formGroup]="loginForm"  (ngSubmit)="saveForm()" style="display:flex;align-items:center;justify-content: center;margin-top: 10px;" novalidate>
+    <mat-card  *ngIf="!showToolbar" style="width:fit-content;">
+        <h1>Login</h1>
+    <div>
+    <mat-form-field appearance="fill">
+        <mat-label>UserName:</mat-label>
+        <input matInput formControlName="userName" name="userName">
+        <mat-error *ngIf="submitted && loginForm.get('userName').hasError('required')">
+             <strong> UserName isrequired</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" name="password">
+        <mat-error *ngIf="submitted && loginForm.get('password').hasError('required')">
+             <strong> Password is required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div>
+    <button mat-raised-button color="primary" type="submit">Login</button>
+    <button mat-raised-button color="warn" style="margin-left:10px">Clear</button>
+</div>
+</mat-card>
+</form>

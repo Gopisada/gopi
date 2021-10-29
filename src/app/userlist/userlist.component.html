@@ -1,0 +1,43 @@
+<p>userlist works!</p>
+
+
+<mat-table [dataSource]="list">
+    <ng-container matColumnDef="name">
+        <mat-header-cell style="background-color: #0046be" *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="age">
+        <mat-header-cell style="background-color: #0046be" *matHeaderCellDef>Age</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.age}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="birthdate">
+        <mat-header-cell  style="background-color: #0046be" *matHeaderCellDef>birthdate</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.birthdate}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row;columns:displayedColumns"></mat-row>
+</mat-table>
+<button mat-button (click)="getData()">Get Data</button>
+<table class="table" *ngIf="userlist.length>0">
+    <tr>
+        <th>Id</th>
+        <th>Userid</th>
+        <th>Title</th>
+    </tr>
+    <tr style="border: 2px solid black;"*ngFor="let item of userlist">
+        <td>{{item.id}}</td>
+        <td>{{item.userId}}</td>
+        <td>{{item.title}}</td>
+        </tr>
+</table>
+<table *ngIf="dummyData.length>0">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Birthday</th>
+    </tr>
+<tbody #myTable></tbody>
+
+
+</table>
+
