@@ -7,3 +7,5 @@ import json
 mysql = mysql.connector.connect(user='Gopisadasivarao', password='Gopsss@143',
   host='home.northeurope.cloudapp.azure.com',
   database='student')
+if __name__ == "__main__":
+ app.run(host='0.0.0.0',port='8080', ssl_context=('cert.pem', 'privkey.pem'))
