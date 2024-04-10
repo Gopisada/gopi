@@ -4,6 +4,7 @@ from flask import request
 import mysql.connector
 from flask_cors import CORS
 import json
+app = Flask(__name__)
 mysql = mysql.connector.connect(user='Gopisadasivarao', password='Gopsss@143',
   host='home.northeurope.cloudapp.azure.com',
   database='student')
